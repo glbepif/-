@@ -1,0 +1,67 @@
+﻿/*Do not remove and do not change this string*/
+* {
+	margin: 0;
+	padding: 0;
+}
+h1{
+	position: fixed;
+	height: 20%;
+	width: 100%;
+	background-color: steelblue;
+	text-align:center;
+}
+.p1{
+	font-size: 150%;
+	text-align: center;
+	color: blue;
+}
+.p2{
+	font-weight: bold;
+	font-size: x-large;
+}
+.block1{
+	z-index: 1;
+	position: fixed;
+	top: 20%;
+	width: 15%;
+	height: 2000px;
+	text-align: center;
+	background-color: lightgrey;
+	box-shadow: 5px 0px 0px 0px  black;
+}
+.block2{
+	z-index: 1;
+	position: fixed;
+	top: 20%;
+	left: 16%;
+	width: 68%;
+	height: 2000px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	background-image: url(fon.jpg);
+}
+.block3{
+	z-index: 1;
+	position: fixed;
+	top: 20%;
+	left: 85%;
+	width: 15%;
+	height: 2000px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	background-color: PaleTurquoise;
+	box-shadow: -5px 0px 0px 0px  black;
+}
+footer{
+	z-index: 1;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 10%;
+	text-align: center;
+	background-color: PaleGreen;
+}
+/*Do not remove and do not change this string*/

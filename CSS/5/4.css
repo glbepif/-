@@ -1,0 +1,19 @@
+/*Do not remove and do not change this string*/
+* {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+.block1{
+	height: 20%;
+	width: 400px;
+	margin: 0 auto;
+	border: 1px solid black;
+	padding: 10px;
+	border-radius: 20px;
+
+}
+.block2{
+	height: 100%;
+}
+/*Do not remove and do not change this string*/
