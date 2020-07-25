@@ -1,0 +1,115 @@
+﻿<!DOCTYPE HTML>
+<!-- Do not remove and do not change this string -->
+<html lang=ru>
+	<head>
+		<meta charset="UTF-8">
+		<title> Элементы формы </title>
+	</head>
+<body>
+	<center><h1>Элементы формы</h1></center>
+	<p></p>
+	<hr style="border-radius:5px;" align="center" color="blue" width="800" size="3px">
+
+	<table align="center" border="1">
+		<tr>
+			<td>
+				<form name="test" method="post" action="input1.php">
+				<p align="center"><b>Поле ввода</b><br><br></p> 
+				<p align="center"><label for="check1">Продукт:</label><input type="text" id="check1" value="Шоколад"><br></p>
+				<p align="center"><label for="check2">Стоимость:</label><input type="text" id="check2" value="42р."><br></p>
+				</form>
+			</td>
+			
+			<td>
+				<form name="test" method="post" action="input1.php">
+				<p align="center"><b>Поле ввода и пароль</b><br><br></p> 
+				<p align="center"><label for="check3">Login:</label><br></p> 
+				<p align="center"><input type="text" id="check3"><br></p>
+				<p align="center"><label for="check4">Password:</label><br></p> 
+				<p align="center"><input type="password" id="check4"><br></p>
+				</form>
+			</td>
+			
+			<td>
+				<form name="test" method="post" action="input1.php">
+				<p><b>Радиокнопки</b><br></p> 
+				<p>Надпись на кнопке(button) определяется атрибутом:<br></p>
+				<p><input name="button" type="radio" value="name" checked>name</p>
+				<p><input name="button" type="radio" value="value" >value</p>
+				<p><input name="button" type="radio" value="bgcolor" >bgcolor</p>
+				<p><input name="button" type="radio" value="id" >id</p>
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<form name="test" action="input1.php" enctype="multipart/form-data" method="post">
+				<p align="center"><b>Выбор файла</b><br><br></p> 
+				<p align="center">Выберите файл для передачи на сервер<br></p>
+				<p align="center"><input type="file" name="toserver"><br></p>
+				<p align="center"><input type="submit" name="sendfile" value="Загрузить файл"></p>
+				</form>
+			</td>
+			
+			<td>
+				<form name="test" action="input1.php" method="post">
+				<p><b>Списки выбора(выбор единственного значения)</b><br></p> 
+				<p>Какое время года вам нравится больше других?<br></p>
+				<p><select size="1" name="season[]">
+				<option selected value="осень">осень</option>
+				<option value="зима">зима</option>
+				<option value="весна">весна</option>
+				<option value="лето">лето</option>
+				</select></p>
+				</form>
+			</td>
+			
+			<td>
+				<form name="test" action="input1.php" method="post">
+				<p><b>Списки выбора(множественный выбор)</b><br></p> 
+				<p>Выберите правильные утверждения<br></p>
+				<p><select name="select" size="3" multiple>
+				<option selected value="111">на улице дождь берите зонт</option>
+				<option value="222">дождь идет только по четвергам</option>
+				<option value="333">после дождичка наступает четверг</option>
+				<option value="444">пятниц на неделе от 1 до 7</option>
+				</select></p>
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p align="center"><b>TEXTAREA</b></p>
+				<form name="test" action="input1.php" method="post">
+				<textarea NAME="foo" rows=10 cols=40></textarea>
+				</form>
+			</td>
+			
+			<td>
+				<form name="MyForm">
+				<fieldset>
+				<legend style="color:blue; font-size: 1.5em">Личные данные</legend>
+				Имя:
+				<input type="text" name="firstname" value="Вася"><br>
+						Фамилия:
+				<input type="text" name="lastname" value="Петров"><br>
+						Пол:
+				<input type="radio" name="Sex" value="м" checked> Мужской
+				<input type="radio" name="Sex" value="ж"> Женский
+				</fieldset>
+				</form>
+			</td>
+			
+			<td>
+				<form name="MyForm">
+				<p align="center"><b>Кнопки</b><br><br></p>
+				<p align="center"><button type="submit">Кнопка submit</button><br><br></p>
+				<p align="center"><button type="reset">Кнопка reset</button><br><br></p>
+				<p align="center"><button type="button">Кнопка button</button></p>
+				</form>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+<!-- Do not remove and do not change this string -->
