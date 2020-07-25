@@ -1,0 +1,94 @@
+﻿<!DOCTYPE HTML>
+<!-- Do not remove and do not change this string -->
+<html lang=ru>
+<head>
+    <title> Простенький калькулятор </title>
+    <meta charset=utf-8>
+    <script>
+        function calc() {
+            let value1 = parseFloat(document.getElementById("value1").value);
+            let value2 = parseFloat(document.getElementById("value2").value);
+            let sign = document.getElementById("sign").selectedIndex;
+            let answer;
+            switch (sign) {
+                case 0:
+                    answer = value1 + value2;
+                    break;
+                case 1:
+                    answer = value1 - value2;
+                    break;
+                case 2:
+                    answer = value1 * value2;
+                    break;
+                case 3:
+                    answer = value1 / value2;
+                    break;
+            }
+
+            document.getElementById("answer").innerText = answer.toString();
+        }
+    </script>
+    <style>
+        table {
+            table-layout: fixed;
+            width: 45%;
+            border: 1px solid black;
+        }
+
+        td {
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        .tr1 {
+            background-color: aqua;
+        }
+
+        .td1 {
+            text-align: right;
+        }
+
+        button {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+<table>
+    <tr class="tr1">
+        <td>Первый операнд</td>
+        <td>Операция</td>
+        <td>Второй операнд</td>
+    </tr>
+    <tr>
+        <td><input type="text" id="value1"></td>
+        <td><select id="sign">
+            <option>
+                +
+            </option>
+            <option>
+                -
+            </option>
+            <option>
+                *
+            </option>
+            <option>
+                /
+            </option>
+        </select></td>
+        <td><input type="text" id="value2"></td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="calc()">Выполнить</button>
+        </td>
+        <td class="td1">Результат</td>
+        <td id="answer"></td>
+    </tr>
+
+</table>
+</body>
+</html>
+<!-- Do not remove and do not change this string -->
+

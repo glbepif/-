@@ -1,0 +1,22 @@
+﻿<!DOCTYPE HTML>
+<!-- Do not remove and do not change this string -->
+<html lang=ru>
+<head>
+	<title>Кнопка со счетчиком</title>
+	<meta charset=utf-8>
+	<script>
+		let counter=0;
+
+		function myFunc(){
+			counter++;
+			document.getElementById("myButton").innerHTML="Нажата " + counter + " раз";
+		}
+	</script>
+</head>
+<body>
+	<button id="myButton" onclick="myFunc()">
+		Нажата 0 раз
+	</button>
+</body>
+</html>
+<!-- Do not remove and do not change this string -->
