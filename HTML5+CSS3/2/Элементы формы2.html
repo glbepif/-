@@ -1,0 +1,127 @@
+﻿<!DOCTYPE HTML>
+<!-- Do not remove and do not change this string -->
+<html lang=ru>
+<head>
+    <title>Элементы формы</title>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            background-color: lightgrey;
+            font-weight: bolder;
+            text-align: center;
+        }
+
+        form {
+            text-align: left;
+        }
+
+		fieldset {
+			width: 450px;
+		}
+
+        em {
+            color: red;
+        }
+
+        label {
+            float: left;
+            width: 30%;
+        }
+
+        input[type=text], input[type=email], textarea {
+            width: 50%;
+        }
+
+		textarea {
+			height: 100px;
+		}
+
+        select {
+            width: 51%;
+        }
+
+        .i1 {
+			padding: 0;
+			margin-left: 30px;
+        }
+
+        .i2 {
+			padding: 0;
+			margin-left: 10px;
+        }
+
+        .i3 {
+			padding: 0;
+			margin-left: 20px;
+        }
+
+        .i4 {
+			padding: 0;
+			margin-left: 26px;
+        }
+
+		.f3 label {
+			float: none;
+		}
+
+
+    </style>
+</head>
+
+<body>
+<form>
+	<i>Пожалуйста заполните форму. Обязательные поля помечены <em>*</em></i>
+
+	<fieldset>
+        <legend>
+            Контактная информация
+        </legend>
+        <p><label for="name">Имя <em>* </em></label><input required type="text" id="name"></p>
+        <p><label for="surname">Телефон </label><input type="text" id="surname" placeholder="+7 (xxx) xxx-xxxx"></p>
+        <p><label for="email">E-mail <em>* </em></label><input required type="email" id="email"
+                                                               placeholder="muk07@mail.ru"></p>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            Персональная информация
+        </legend>
+        <p><label for="age">Возраст <em>* </em></label><input required pattern="[0-9]+$" type="text" id="age"></p>
+        <p><label for="gender">Пол </label><select size="1" id="gender" name="gender">
+            <option selected value="Женщина">Женщина</option>
+            <option value="Мужчина">Мужчина</option>
+        </select>
+        </p>
+        <p><label for="personalq">Перечислите личные качества </label><textarea id="personalq"
+                                                                                name="personalq"></textarea></p>
+    </fieldset>
+    <fieldset class="f3">
+        <legend>
+            Выберите Ваших любимых животных
+        </legend>
+
+
+        <p>
+            <input type="checkbox" value="Зебра"> <label>Зебра</label>
+            <input type="checkbox" value="Кошка" class="i1"> <label>Кошка</label>
+            <input type="checkbox" value="Анаконда" class="i2"> <label>Анаконда</label>
+        </p>
+        <p>
+            <input type="checkbox" value="Человек"> <label>Человек</label>
+            <input type="checkbox" value="Слон" class="i2"> <label>Слон</label>
+            <input type="checkbox" value="Антилопа" class="i4"> <label>Антилопа</label>
+        </p>
+        <p>
+            <input type="checkbox" value="Голубь"> <label>Голубь</label>
+            <input type="checkbox" value="Краб" class="i3"> <label>Краб</label>
+        </p>
+    </fieldset>
+
+    <input type="submit" value="Отправить информацию">
+</form>
+
+</body>
+</html>
+<!-- Do not remove and do not change this string -->
+
