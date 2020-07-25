@@ -1,0 +1,102 @@
+﻿<!DOCTYPE HTML>
+
+<!-- Do not remove and do not change this string -->
+
+<html lang=ru>
+
+<!-- сортировать таблицу -->
+
+<head>
+    <meta charset=utf-8>
+    <script>
+        document.addEventListener('click', function (event) { // слушатель событий(тип события клик, вызывает мой метод)
+            console.log(event.target);
+
+            let target = event.target; // объект по которому был произведен клик
+
+
+            if (target.tagName !== 'TH') return;
+            let col = target.innerText === 'Фамилия' ? 0 : 1;
+
+            let table = target.parentNode.parentNode.parentNode; //th -> thead -> tr1 -> table
+            let tbody = table.getElementsByTagName("tbody")[0];
+
+            let rows = tbody.getElementsByTagName("tr");
+            let length = rows.length;
+
+            let arr = Array(length); // массив для отсортированных строк
+
+            for (let i = 0; i < length; i++) {
+                arr[i] = rows[i];
+            }
+            for (let i = 0; i < length; i++) {
+                tbody.removeChild(arr[i]);
+            }
+
+            arr.sort(function (a, b) {
+                let val1, val2;
+
+                if (target.innerText === 'Фамилия') {
+                    val1 = a.getElementsByTagName("td")[0].innerText;
+                    val2 = b.getElementsByTagName("td")[0].innerText;
+                } else {
+                    val1 = a.getElementsByTagName("td")[1].innerText;
+                    val2 = b.getElementsByTagName("td")[1].innerText;
+                }
+
+                return val1 < val2 ? -1 : 1;
+            });
+
+            for (let i = 0; i < length; i++) {
+                tbody.appendChild(arr[i]);
+            }
+        });
+    </script>
+</head>
+<body>
+
+<table border="1px" cellpadding="10px" name="mytab" id="mytab">
+    <thead bgcolor="aqua">
+    <th id="col1" align="center">Фамилия</th>
+    <th id="col2" align="center">Телефон</th>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Яковлев</td>
+        <td>7453217</td>
+    </tr>
+    <tr>
+        <td>Иванов</td>
+        <td>3453212</td>
+    </tr>
+    <tr>
+        <td>Бендер</td>
+        <td>8453212</td>
+    </tr>
+    <tr>
+        <td>Паниковский</td>
+        <td>6453212</td>
+    </tr>
+    <tr>
+        <td>Петров</td>
+        <td>8765432</td>
+    </tr>
+    <tr>
+        <td>Сидоров</td>
+        <td>5432345</td>
+    </tr>
+    <tr>
+        <td>Македонский</td>
+        <td>8765233</td>
+    </tr>
+    <tr>
+        <td>Иоанн 23</td>
+        <td>2345432</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
+
+<!-- Do not remove and do not change this string -->
+
